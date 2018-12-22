@@ -1,0 +1,133 @@
+let Pintura = {
+    NameCol: string /// NameCol
+    Categoria: [Base agua, esmalte]
+    Base: char /// base
+    Linea: [Berelinte, berelex, sus mamadas]
+    Rango: [r-1,r-2,r-3] /// Rango
+    Color: [objs tipo color]
+}
+
+let color = {
+    Tipo: {
+        Onza: [] /// esto sera O[]  donde la poc [0]=1lt , [1]=4lt,  [2]=19lt
+        Parte_Onza: [] /// estp sera N[]  donde la poc [0]=1lt , [1]=4lt,  [2]=19lt
+    }
+    Colorante: [] // su tamano debe con la cantidad de obj tipo
+}
+
+Cada que encuentra un 1-X* inicia nuevamente esta parte de lectura del archivo hasta acabarlo.
+Se llena por hoja,asi que recordar actualizar las const Categoria, Linea
+
+1-0606 P B 1 4 19 R-1 C 2 8 38 
+
+Se convierte en esto =
+
+NameCol: 1-0606   *
+Base: P *
+Colorante: B
+N0: 1 
+N1: 4 
+N2: 19
+Rango: R-1 *
+Colorante: C
+N0: 2
+N1: 8
+N2: 38
+
+
+1-0607 P B 1 1/2 6 28 1/2 R-1 C 9 1/2 38 3 1/2 Y 36 1/2 I 1/2 2 9 1/2
+
+Se convierte en esto=
+
+NameCol: 1-0607
+Base: P
+Colorante: B 
+1 1/2 anterior tiene medio = N0: 1.5
+N1: 6
+28 1/2 anterior tiene medio = N2: 28.5
+Rango: R-1
+Colorante: C
+9 1/2 anterior tiene medio = N0: 9.5
+N1: 38
+3 1/2 anterior tiene medio = N2: 3.5
+Y indica que hay onza y parte onza O2: N2 -> N2:0
+36 1/2 anterior
+I 1/2 2 9 1/2
+
+1-0608 T B 3 1/2 14 1 Y 18 1/2 R-1 C 33 1/2 2 Y 38 13 Y 12 1/2 L 5 20 1 Y 47
+AXX 1/2 2 9 1/2
+1-0609
+D B 3 1/2 14 1 Y 18 1/2 R-1 C 34 1/2 2 Y 42 13 Y 31 1/2 D 1 4 19
+AXX 2 8 38
+1-0610
+D B 9 36 3 Y 27 R-1 C 1 Y 32 6 Y 32 31 Y 32 D 1 1/2 6 28 1/2
+AXX 12 1 Y 00 4 Y 36
+1-0706 P L 2 8 38 R-1 T 6 24 2 Y 18 R 1/2 2 9 1/2
+1-0707 P B 1/2 2 9 1/2 R-1 C 15 1 Y 12 5 Y 45 I 1/2 2 9 1/2
+1-0708 T C 37 1/2 3 Y 06 14 Y 40 1/2 R-1 D 1 1/2 6 28 1/2 L 6 1/2 26 2 Y 27 1/2
+AXX 3 12 1 Y 09
+1-0709
+D
+C 28 2 Y 16 11 Y 04 R-1 D 1 4 19 L 4 16 1 Y 28
+AXX 5 20 1 Y 47
+
+
+[
+  {
+    "name": "Table 1",
+    "data": [
+0      ["COLOR","BASE","COLORANTE","LITRO","GALÓN","CUBETA","R $"],
+1      ["1-0101", "P", "B" ,1.5 ,6 ,28.5 ,"R-1"],
+2      [null, null, "C", 3, 12, "1 Y 09"],
+3      [null ,null , "I", 0.5, 2, 9.5],
+4      ["1-0102", "P", "B", 3.5, 14, "1 Y 18 .5", "R-1"],
+5      [null ,null , "C" ,7 ,28 , "2 Y 37"],
+6      [null ,null , "I" ,2 ,8 ,38 ],
+
+
+
+
+[
+ {
+  "name": "Table 1",
+  "data": [
+   [
+    "COLOR",
+    "BASE",
+    "COLORANTE",
+    "LITRO",
+    "GALÓN",
+    "CUBETA",
+    "R $"
+   ],
+   [
+    "1-0101",
+    "P",
+    "B",
+    1.5,
+    6,
+    28.5,
+    "R-1"
+   ],
+   [
+    null,
+    null,
+    "C",
+    3,
+    12,
+    "1 Y 09"
+   ],
+   [
+    null,
+    null,
+    "I",
+    0.5,
+    2,
+    9.5
+   ],
+  ]
+ }
+]
+
+
+
